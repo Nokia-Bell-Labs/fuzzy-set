@@ -29,7 +29,7 @@ sudo pip3 install sphinx_mdinclude --break-system-packages
 * Install [poetry](https://pypi.org/project/poetry/).
 * Install [graphviz](https://jupyter.org/install).
 
-## Installing `sphinx-uml`
+## Installing `fuzzy-set`
 ### From PIP
 
 There are several ways to install the package:
@@ -52,7 +52,7 @@ pip install fuzzy-set --break-system-packages
 
 ```bash
 poetry run pip install
-pip install sphinx-uml
+pip install fuzzy-set 
 ```
 
 * In a
@@ -63,7 +63,7 @@ the package is available only if this virtual environment is enabled.
 python3 -m venv env      # Create your virtual environment
 source env/bin/activate  # Activate the "env" virtual environment
 which python             # Check you use the venv python interpret (i.e., not /usr/bin/python3)
-pip install sphinx-uml
+pip install fuzzy-set 
 deactivate               # Leave the  "env" virtual environment
 ```
 
@@ -72,8 +72,8 @@ deactivate               # Leave the  "env" virtual environment
 * Clone the repository and install the package:
 
 ```bash
-git clone https://github.com/ibgp2/sphinx-uml.git
-cd sphinx_uml 
+git clone https://github.com/Nokia-Bell-Labs/fuzzy-set.git
+cd fuzzy-set 
 ```
 
 * Install the missing dependencies and build the wheel of the project in a `poetry` environment:
@@ -82,10 +82,10 @@ poetry install  # Install the core dependencies. Pass --with docs,test,dev to in
 poetry build    # Build the wheel (see dist/*whl)
 ```
 
-* The resulting `dist/sphinx_uml*whl` file can be installed using `pip` (see the previous section).
+* The resulting `dist/fuzzy-set*whl` file can be installed using `pip` (see the previous section).
 
 _Example:_ 
 
 ```bash
-pip3 install dist/sphinx_uml*whl --break-system-packages 
+pip3 install dist/fuzzy-set*whl --break-system-packages 
 ```
