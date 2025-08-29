@@ -5,7 +5,7 @@ The `fuzzy-set` is a [Python3](https://www.python.org/downloads/) framework buil
 
 * [Fuzzy Sets](src/fuzzy_set/fuzzy_set.py);
 * [Fuzzy Numbers](src/fuzzy_set/fuzzy_number.py);
-* [Trapezoidal Fuzzy Numbers](src/fuzzy_set/trapezoidal_fuzzy_number.py);
+* [Trapezoidal Fuzzy Numbers](src/fuzzy_set/trapezoidal_fuzzy_number.py).
 
 __Details:__
 
@@ -13,7 +13,7 @@ __Details:__
 * [History](HISTORY.md)
 * [LICENSE](LICENSE)
 
-## [Documentation](https://nokia-fuzzy-set.readthedocs.io/en/latest/?badge=latest)
+## [Documentation](https://fuzzy-set.readthedocs.io/en/latest/)
 
 ## References
 
