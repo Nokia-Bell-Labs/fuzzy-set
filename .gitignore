@@ -1,0 +1,18 @@
+# Packaging
+build/
+dist/
+.coverage
+.pytest_cache
+.tox/
+__pycache__
+*.egg-info
+
+# Python
+*.pyc
+*.ipynb
+
+# Editor
+*.swp
+
+# Helpers
+install.sh

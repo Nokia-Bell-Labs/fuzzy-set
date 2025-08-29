@@ -1,0 +1,79 @@
+[project]
+name = "fuzzy-set"
+readme = "README.md"
+license = {text = "BSD-3"}
+requires-python = ">= 3.9"
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: Python Software Foundation License",
+  "Natural Language :: English",
+  "Programming Language :: Python :: 3 :: Only",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Documentation :: Sphinx",
+]
+
+[tool.poetry]
+name = "fuzzy-set"
+version = "0.0.1"
+description = "This library allows to manipulate and plot Fuzzy Sets, Fuzzy Numbers, Trapezoidal Fuzzy Numbers and Triangular Fuzzy Numbers"
+authors = [	
+	"Marc-Olivier Buob <marc-olivier.buob@nokia-bell-labs.com>",
+]
+license = "BSD-3 license"
+readme = "README.md"  
+packages = [
+	{include = "fuzzy_set", from = "src"},
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10"
+matplotlib = ">=3.10.3"
+numpy = ">=1.26.1"
+scipy = ">=1.11.3"
+
+[tool.poetry.group.test]
+optional = true
+
+[tool.poetry.group.test.dependencies]
+pytest = ">=7.2.1"
+pytest-runner = "*"
+
+[tool.poetry.group.dev]
+optional = true
+
+[tool.poetry.group.dev.dependencies]
+pip = "*"
+bump2version = "*"
+flake8 = "*"
+coverage = "*"
+
+[tool.poetry.group.docs]
+optional = true
+
+[tool.poetry.group.docs.dependencies]
+pydata-sphinx-theme = "*"
+Sphinx = ">=6.0.0"
+sphinx_copybutton = "*"
+sphinx_mdinclude = "*"
+
+[tool.pylint.variables]
+callbacks = ["check_"]
+
+# https://docs.pytest.org/en/7.1.x/reference/customize.html
+[tool.pytest.ini_options]
+pythonpath = "src"
+minversion = "7.2.1"
+addopts = "--doctest-modules --showlocals --capture=no --exitfirst --failed-first"
+testpaths = [
+    "tests"
+]
+
+[build-system]
+requires = ["poetry-core", "dulwich", "poetry-plugin-export"]
+build-backend = "poetry.core.masonry.api"
+
