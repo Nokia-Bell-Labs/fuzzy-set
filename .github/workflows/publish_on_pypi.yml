@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/p/sphinx_uml
+      url: https://pypi.org/p/fuzzy_set_nokia
     permissions:
       id-token: write  # IMPORTANT: mandatory for trusted publishing
 
@@ -61,7 +61,7 @@ jobs:
 
     environment:
       name: testpypi
-      url: https://test.pypi.org/p/sphinx_uml
+      url: https://test.pypi.org/p/fuzzy_set_nokia
 
     permissions:
       id-token: write  # IMPORTANT: mandatory for trusted publishing
