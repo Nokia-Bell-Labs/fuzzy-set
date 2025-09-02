@@ -1,4 +1,11 @@
 # `fuzzy-set`
+
+[![PyPI](https://img.shields.io/pypi/v/fuzzy-set-nokia.svg)](https://pypi.python.org/pypi/fuzzy-set-nokia/)
+[![Build](https://github.com/Nokia-Bell-Labs/fuzzy-set/workflows/build/badge.svg)](https://github.com/Nokia-Bell-Labs/fuzzy-set-nokia/actions/workflows/build.yml)
+[![Documentation](https://github.com/Nokia-Bell-Labs/fuzzy-set/workflows/docs/badge.svg)](https://github.com/Nokia-Bell-Labs/fuzzy-set-nokia/actions/workflows/docs.yml)
+[![ReadTheDocs](https://readthedocs.org/projects/fuzzy-set/badge/?version=latest)](https://fuzzy-set-nokia.readthedocs.io/en/)
+
+
 ## Overview
 
 The `fuzzy-set` package provides a [Python3](https://www.python.org/downloads/) framework built on top of [Numpy](https://numpy.org/) and [Matplotlib](https://matplotlib.org/) allowing to manipulate and plot:
