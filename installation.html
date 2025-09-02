@@ -440,20 +440,20 @@ sudo<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> 
 system-wide. You must either use a virtual environment, or either pass the
 <code class="docutils literal notranslate"><span class="pre">--break-system-packages</span></code> options:</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">fuzzy</span><span class="o">-</span><span class="nb">set</span> <span class="o">--</span><span class="k">break</span><span class="o">-</span><span class="n">system</span><span class="o">-</span><span class="n">packages</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">fuzzy</span><span class="o">-</span><span class="nb">set</span><span class="o">-</span><span class="n">nokia</span> <span class="o">--</span><span class="k">break</span><span class="o">-</span><span class="n">system</span><span class="o">-</span><span class="n">packages</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p><em>User-wide:</em> As a normal user run:</p></li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">fuzzy</span><span class="o">-</span><span class="nb">set</span> <span class="o">--</span><span class="k">break</span><span class="o">-</span><span class="n">system</span><span class="o">-</span><span class="n">packages</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">fuzzy</span><span class="o">-</span><span class="nb">set</span><span class="o">-</span><span class="n">nokia</span> <span class="o">--</span><span class="k">break</span><span class="o">-</span><span class="n">system</span><span class="o">-</span><span class="n">packages</span>
 </pre></div>
 </div>
 <ul class="simple">
 <li><p>In a <code class="docutils literal notranslate"><span class="pre">poetry</span></code> environment: the package is available from program run using <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">run</span> <span class="pre">...</span></code>.</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>poetry<span class="w"> </span>run<span class="w"> </span>pip<span class="w"> </span>install
-pip<span class="w"> </span>install<span class="w"> </span>fuzzy-set
+pip<span class="w"> </span>install<span class="w"> </span>fuzzy-set-nokia
 </pre></div>
 </div>
 <ul class="simple">
@@ -464,7 +464,7 @@ the package is available only if this virtual environment is enabled.</p></li>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>env<span class="w">      </span><span class="c1"># Create your virtual environment</span>
 <span class="nb">source</span><span class="w"> </span>env/bin/activate<span class="w">  </span><span class="c1"># Activate the &quot;env&quot; virtual environment</span>
 which<span class="w"> </span>python<span class="w">             </span><span class="c1"># Check you use the venv python interpret (i.e., not /usr/bin/python3)</span>
-pip<span class="w"> </span>install<span class="w"> </span>fuzzy-set
+pip<span class="w"> </span>install<span class="w"> </span>fuzzy-set-nokia
 deactivate<span class="w">               </span><span class="c1"># Leave the  &quot;env&quot; virtual environment</span>
 </pre></div>
 </div>
