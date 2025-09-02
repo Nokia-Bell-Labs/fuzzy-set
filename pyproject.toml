@@ -19,7 +19,7 @@ classifiers = [
 
 [tool.poetry]
 name = "fuzzy-set"
-version = "0.0.3"
+version = "0.1.0"
 description = "This library allows to manipulate and plot Fuzzy Sets, Fuzzy Numbers, Trapezoidal Fuzzy Numbers and Triangular Fuzzy Numbers"
 authors = [	
 	"Marc-Olivier Buob <marc-olivier.buob@nokia-bell-labs.com>",
