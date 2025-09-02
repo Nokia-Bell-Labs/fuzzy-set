@@ -14,3 +14,9 @@
   * Fixed `installation.md`
 * CI
   * Fixed `setup.cfg`
+
+## 0.0.3 (2025-09-02)
+
+* Packaging
+  * Renamed the package to `fuzzy-set-nokia`
+    * The previous name was too close of existing projects already in pypi.org
