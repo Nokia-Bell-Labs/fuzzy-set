@@ -1,5 +1,5 @@
 [project]
-name = "fuzzy-set"
+name = "fuzzy-set-nokia"
 readme = "README.md"
 license = {text = "BSD-3"}
 requires-python = ">= 3.9"

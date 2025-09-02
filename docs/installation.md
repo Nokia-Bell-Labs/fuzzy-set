@@ -39,20 +39,20 @@ system-wide. You must either use a virtual environment, or either pass the
 `--break-system-packages` options:
 
 ```
-sudo pip install fuzzy-set --break-system-packages
+sudo pip install fuzzy-set-nokia --break-system-packages
 ```
 
 * _User-wide:_ As a normal user run:
 
 ```
-pip install fuzzy-set --break-system-packages
+pip install fuzzy-set-nokia --break-system-packages
 ```
 
 * In a `poetry` environment: the package is available from program run using `poetry run ...`.
 
 ```bash
 poetry run pip install
-pip install fuzzy-set 
+pip install fuzzy-set-nokia
 ```
 
 * In a
@@ -63,7 +63,7 @@ the package is available only if this virtual environment is enabled.
 python3 -m venv env      # Create your virtual environment
 source env/bin/activate  # Activate the "env" virtual environment
 which python             # Check you use the venv python interpret (i.e., not /usr/bin/python3)
-pip install fuzzy-set 
+pip install fuzzy-set-nokia
 deactivate               # Leave the  "env" virtual environment
 ```
 
