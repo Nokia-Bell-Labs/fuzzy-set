@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>fuzzy_set package &#8212; Fuzzy set 0.1.2 documentation</title>
+    <title>CI &#8212; Fuzzy set 0.1.2 documentation</title>
   
   
   
@@ -45,7 +45,7 @@
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=30646c52"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'fuzzy_set';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'ci';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Authors" href="authors.html" />
@@ -135,9 +135,16 @@
 </li>
 
 
-<li class="nav-item current active">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="api/index.html">
     API
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    CI
   </a>
 </li>
 
@@ -263,9 +270,16 @@
 </li>
 
 
-<li class="nav-item current active">
+<li class="nav-item ">
   <a class="nav-link nav-internal" href="api/index.html">
     API
+  </a>
+</li>
+
+
+<li class="nav-item current active">
+  <a class="nav-link nav-internal" href="#">
+    CI
   </a>
 </li>
 
@@ -338,12 +352,7 @@
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Packages</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
-</ul>
-</details></li>
-</ul>
-</div>
+  <div class="bd-toc-item navbar-nav"></div>
 </nav></div>
     </div>
   
@@ -382,10 +391,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    
-    <li class="breadcrumb-item"><a href="api/index.html" class="nav-link">API</a></li>
-    
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">fuzzy_set package</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">CI</span></li>
   </ul>
 </nav>
 </div>
@@ -402,15 +408,75 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="fuzzy-set-package">
-<h1>fuzzy_set package<a class="headerlink" href="#fuzzy-set-package" title="Link to this heading">#</a></h1>
-<section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
-<div class="toctree-wrapper compound">
-</div>
+  <section id="ci">
+<h1>CI<a class="headerlink" href="#ci" title="Link to this heading">#</a></h1>
+<p>This page gather the steps to set up the Continuous Integration by reusing
+the files related to another similar project. The relevant files are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code>: Project settings</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.github/workflows/*.yml</span></code>: GitHub actions</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">.readthedocs.yml</span></code>: Readthedoc workflow</p></li>
+</ul>
+<section id="build">
+<h2>Build<a class="headerlink" href="#build" title="Link to this heading">#</a></h2>
+<p>If the project is build using <code class="docutils literal notranslate"><span class="pre">poetry</span></code>, ensure this is reflected in <code class="docutils literal notranslate"><span class="pre">.github/workflows/build.yml</span></code>.</p>
 </section>
-<section id="module-fuzzy_set">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-fuzzy_set" title="Link to this heading">#</a></h2>
+<section id="pypi">
+<h2>PyPI<a class="headerlink" href="#pypi" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>In <code class="docutils literal notranslate"><span class="pre">.github/workflows/publish_on_pypi.yml</span></code>:</p></li>
+</ol>
+<ul class="simple">
+<li><p>update the PyPI URL of the project</p></li>
+<li><p>enable/remove in the <code class="docutils literal notranslate"><span class="pre">with:</span></code> statement:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">verbose:</span> <span class="pre">true</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">skip-existing:</span> <span class="pre">true</span></code></p></li>
+</ul>
+</li>
+</ul>
+<ol class="arabic simple">
+<li><p>Configure the project <a class="reference external" href="https://test.pypi.org/">Test PyPI</a>.</p></li>
+</ol>
+<ul class="simple">
+<li><p>Connect to your <a class="reference external" href="https://test.pypi.org/">Test PyPI</a> account.</p></li>
+<li><p><a class="reference external" href="https://test.pypi.org/manage/account/publishing/">Add a new pending publisher</a>. This allows GitHub to push stuff to <a class="reference external" href="https://test.pypi.org/">Test PyPI</a> without configuring any token.</p>
+<ul>
+<li><p><strong>Name of the PyPI project:</strong> name of the PyPI package (defined in <code class="docutils literal notranslate"><span class="pre">poetry.toml</span></code>, e.g., <code class="docutils literal notranslate"><span class="pre">fuzzy-set-nokia</span></code>)</p></li>
+<li><p><strong>Owner:</strong> 2nd part in the GitHub URL repository (e.g., <code class="docutils literal notranslate"><span class="pre">Nokia-Bell-Labs</span></code> in <a class="github reference external" href="https://github.com/Nokia-Bell-Labs/fuzzy-set">Nokia-Bell-Labs/fuzzy-set</a>).</p></li>
+<li><p><strong>Repository name:</strong> 3rd part in the GitHub URL repository (e.g., <code class="docutils literal notranslate"><span class="pre">fuzzy-set</span></code> in <a class="github reference external" href="https://github.com/Nokia-Bell-Labs/fuzzy-set">Nokia-Bell-Labs/fuzzy-set</a>).</p></li>
+<li><p><strong>Workflow name:</strong> Filename of publishing workflow (e.g., <code class="docutils literal notranslate"><span class="pre">publish_on_pypi.yml</span></code> in <a class="github reference external" href="https://github.com/Nokia-Bell-Labs/fuzzy-set/blob/main/.github/workflows/publish_on_pypi.yml">Nokia-Bell-Labs/fuzzy-set</a>).</p></li>
+<li><p><strong>Environment name:</strong> <code class="docutils literal notranslate"><span class="pre">testpypi</span></code> (reported in GitHub environments)</p></li>
+</ul>
+</li>
+</ul>
+<ol class="arabic simple">
+<li><p>Repeat the previous steps for <a class="reference external" href="https://pypi.org/">PyPI</a>.</p></li>
+<li><p>Push an update using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span></code> and a tag using <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">--tags</span></code>. As stated in <code class="docutils literal notranslate"><span class="pre">.github/workflows/publish_on_pypi.yml</span></code> this respectively updates <a class="reference external" href="https://test.pypi.org/">Test PyPI</a> and <a class="reference external" href="https://pypi.org/">PyPI</a></p></li>
+<li><p>Update the related badge in <code class="docutils literal notranslate"><span class="pre">README.md</span></code>. Test the link and image URLs of the badge are correct with a web browser.</p></li>
+</ol>
+</section>
+<section id="readthedoc">
+<h2>ReadTheDoc<a class="headerlink" href="#readthedoc" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>If the project is build using <code class="docutils literal notranslate"><span class="pre">poetry</span></code>, ensure this is reflected in <code class="docutils literal notranslate"><span class="pre">.readthedocs.yml</span></code>. In particular, ensure that the dependencies needed to build the documentation will be deployed.</p></li>
+<li><p>Connect to your <a class="reference external" href="https://app.readthedocs.org/dashboard/">Readthedoc</a> account.</p></li>
+<li><p>Create a new project. This name is used by your dashboard. You should choose the name of the PyPI package but it’s not mandatory. If the repository is not found automatically, <a class="reference external" href="https://app.readthedocs.org/dashboard/import/manual/">configure it manually</a>:</p></li>
+</ol>
+<ul class="simple">
+<li><p><strong>Name:</strong> this name is used to craft the URL that will serve the documentation.</p></li>
+<li><p><strong>Repository URL:</strong> the GitHub URL (e.g., <a class="github reference external" href="https://github.com/Nokia-Bell-Labs/fuzzy-set">Nokia-Bell-Labs/fuzzy-set</a>).</p></li>
+<li><p><strong>Default branch:</strong> usually <code class="docutils literal notranslate"><span class="pre">main</span></code>. Old repositories might use <code class="docutils literal notranslate"><span class="pre">master</span></code>.</p></li>
+<li><p><strong>Language</strong> English</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>If readthedoc displays <em>Unable to attach webhook to this project Could not add webhook for “fuzzy-set”. Make sure `you have the correct GitHub permissions &lt;https://docs.readthedocs.io/page/webhooks.html&gt;`_.</em>:</p></li>
+</ol>
+<ul class="simple">
+<li><p>If this is a repository attached to an organization, browse your Github profile <em>&gt; Application &gt; Authorized OAuth Apps &gt; Read the Docs Community (readthedocs.org) &gt; Organization access</em>. Select the appropriate organization and request an access if not yet granted.</p></li>
+<li><p>In <a class="reference external" href="https://app.readthedocs.org/dashboard/fuzzy-set/integrations/">the Integration settings of your Readthedoc project</a>, try to resync the hook.</p></li>
+<li><p>If it fails, try <a class="reference external" href="https://docs.readthedocs.com/platform/stable/guides/setup/git-repo-manual.html">configure the webhook manually</a></p></li>
+</ul>
 </section>
 </section>
 
@@ -461,8 +527,9 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-fuzzy_set">Module contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#build">Build</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pypi">PyPI</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#readthedoc">ReadTheDoc</a></li>
 </ul>
   </nav></div>
 
@@ -470,7 +537,7 @@
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/fuzzy_set.rst.txt"
+      <li><a href="_sources/ci.md.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div></div>
