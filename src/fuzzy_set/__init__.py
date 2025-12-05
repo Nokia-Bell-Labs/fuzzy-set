@@ -13,3 +13,4 @@ from .fuzzy_number import FuzzyNumber
 from .fuzzy_set import INFINITY, REALS, FuzzySet
 from .intersection import find_intersection
 from .trapezoidal_fuzzy_number import TrapezoidalFuzzyNumber
+from .triangular_fuzzy_number import TriangularFuzzyNumber

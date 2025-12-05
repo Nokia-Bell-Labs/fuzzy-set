@@ -31,3 +31,10 @@
   * `publish_on_pypi.yml`:
     * Fixed [pypi](https://pypi.org/p/fuzzy_set_nokia) and [testpypi](https://test.pypi.org/p/fuzzy_set_nokia) URLs.
     * The `testpypi` workflow no more crash when updating an existing version and displays verbose error messages.
+
+## 0.1.3
+
+* Added `TriangularFuzzyNumber`.
+* Documentation:
+  * Fixed docstring, doctest.
+* Fixed `find_intersection` when intersection is computed for two overlapping lines.
