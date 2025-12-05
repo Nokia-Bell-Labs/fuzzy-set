@@ -38,11 +38,14 @@ class FuzzyNumber(FuzzySet):
 
     >>> import matplotlib.pyplot as plt
     >>> from fuzzy_set import FuzzyNumber
-    >>> a1 = FuzzyNumber(dict(enumerate([0, 0, 0.01, 1, 1, 0.7, 0.2, 0.1, 0])))
+    >>> a1 = FuzzyNumber(dict(
+    ...     enumerate([0, 0.6, 0.8, 1, 1, 0.9, 0.75, 0.4, 0]))
+    ... )
     >>> a1.plot(label="$a_1$", marker=".", with_xis=False, with_ei=True)
+    <matplotlib.collections.PathCollection object at ...>
     >>> plt.legend()
+    <matplotlib.legend.Legend object at ...>
     >>> plt.grid()
-    >>> plt.show()
     """
     def __init__(self, mu: dict[float, float]):
         """
@@ -63,6 +66,10 @@ class FuzzyNumber(FuzzySet):
         >>> a2 = FuzzyNumber(
         ...     dict(enumerate([0, 0.1, 0.8, 1, 1, 0.9, 0]))
         ... )  # Not Convex
+        Traceback (most recent call last):
+        ...
+        ValueError: ...
+        ...
         """
         super().__init__(mu, is_continuous=True)
         if not self.is_normalized():

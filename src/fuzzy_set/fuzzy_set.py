@@ -46,9 +46,10 @@ class FuzzySet(dict):
     ...     dict(enumerate([0, 0, 0.1, 0.2, 0.7, 1, 1, 0.7, 0.2, 0.1, 0]))
     ... )
     >>> a1.plot(label="$a_1$", marker="x")
+    [<matplotlib.lines.Line2D object at ...>]
     >>> plt.legend()
+    <matplotlib.legend.Legend object at ...>
     >>> plt.grid()
-    >>> plt.show()
     """
     def __init__(
         self,

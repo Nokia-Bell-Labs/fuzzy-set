@@ -70,7 +70,7 @@ pythonpath = "src"
 minversion = "7.2.1"
 addopts = "--doctest-modules --showlocals --capture=no --exitfirst --failed-first"
 testpaths = [
-    "tests"
+    "src", "tests"
 ]
 
 [build-system]
