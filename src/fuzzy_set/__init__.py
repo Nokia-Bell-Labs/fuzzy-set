@@ -6,7 +6,7 @@ __author__ = "Marc-Olivier Buob"
 __maintainer__ = "Marc-Olivier Buob"
 __email__ = "marc-olivier.buob@nokia-bell-labs.com"
 __license__ = "BSD-3"
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 
 
 from .fuzzy_number import FuzzyNumber
