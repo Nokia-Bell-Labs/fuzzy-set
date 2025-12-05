@@ -32,3 +32,11 @@ def test_find_intersection_parallel():
     obtained = find_intersection(p1, p2, p3, p4)
     expected = None
     assert obtained == expected, pformat(locals())
+
+
+def test_find_intersection_undefined():
+    p1, p2 = (9, 0.1), (10, 0)
+    p3, p4 = p1, p2
+    obtained = find_intersection(p1, p2, p3, p4)
+    expected = None
+    assert obtained == expected, pformat(locals())
