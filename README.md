@@ -5,14 +5,14 @@
 [![Documentation](https://github.com/Nokia-Bell-Labs/fuzzy-set/workflows/docs/badge.svg)](https://github.com/Nokia-Bell-Labs/fuzzy-set/actions/workflows/docs.yml)
 [![ReadTheDocs](https://readthedocs.org/projects/fuzzy-set/badge/?version=latest)](https://fuzzy-set.readthedocs.io/en/)
 
-
 ## Overview
 
 The `fuzzy-set` package provides a [Python3](https://www.python.org/downloads/) framework built on top of [Numpy](https://numpy.org/) and [Matplotlib](https://matplotlib.org/) allowing to manipulate and plot:
 
 * [Fuzzy Sets](https://fuzzy-set.readthedocs.io/en/latest/fuzzy_set.fuzzy_set.html)
 * [Fuzzy Numbers](https://fuzzy-set.readthedocs.io/en/latest/fuzzy_set.fuzzy_number.html)
-* [Trapezoidal Fuzzy Numbers](https://fuzzy-set.readthedocs.io/en/latest/fuzzy_set.fuzzy_set.html)
+* [Trapezoidal Fuzzy Numbers](https://fuzzy-set.readthedocs.io/en/latest/fuzzy_set.trapezoidal_fuzzy_number.html)
+* [Triangular Fuzzy Numbers](https://fuzzy-set.readthedocs.io/en/latest/fuzzy_set.triangular_fuzzy_number.html)
 
 ## [Documentation](https://fuzzy-set.readthedocs.io/en/latest/)
 
