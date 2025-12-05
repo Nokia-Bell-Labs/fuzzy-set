@@ -29,7 +29,7 @@ sudo pip3 install sphinx_mdinclude --break-system-packages
 * Install [poetry](https://pypi.org/project/poetry/).
 * Install [graphviz](https://jupyter.org/install).
 
-## Installing `fuzzy-set`
+## Package installation
 ### From PIP
 
 There are several ways to install the package:
